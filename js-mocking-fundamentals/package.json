@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "jest",
+    "mockfn": "jest src/__tests__/mock-fn.js --watchAll",
     "test:watch": "jest --watchAll"
   },
   "repository": {
