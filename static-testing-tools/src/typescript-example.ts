@@ -1,14 +1,22 @@
-function add(a, b) {
+function add(a: number, b: number): number {
   return a + b;
 }
 
-function getFullName(user) {
+interface User {
+  name: {
+    first: string;
+    middle: string;
+    last: string;
+  };
+}
+
+function getFullName(user: User): string {
   const {
     name: {first, middle, last},
   } = user;
   return [first, middle, last].filter(Boolean).join('');
 }
 
-add(1, 'two');
+add(1, 2);
 
-getFullName({name: {first: 'Joe', midd1e: 'Bud', last: 'Matthews'}});
+getFullName({name: {first: 'Joe', middle: 'Bud', last: 'Matthews'}});
