@@ -27,9 +27,9 @@ test("mocking implementation of a subtract function", () => {
 
 test("mocking return value of a sum function", () => {
   const sum = jest.fn();
-  sum.mockReturnValue(4);
+  sum.mockReturnValue(10);
   const result = sum(7, 3);
-  expect(result).toBe(4);
+  expect(result).toBe(10);
 });
 
 test("mocking resolved value of a promise function", async () => {
